@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8fl3y7wmwqm0"]
+
+[sub_resource type="TileSet" id="TileSet_hkme7"]
+physics_layer_0/collision_layer = 1
+
+[node name="World" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_hkme7")
+format = 2
