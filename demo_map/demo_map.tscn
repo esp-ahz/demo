@@ -274,8 +274,7 @@ layer_2/z_index = 0
 layer_2/tile_data = PackedInt32Array()
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(668, 445)
-zoom = Vector2(0.5, 0.5)
+position = Vector2(904, 546)
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 position = Vector2(1027, 78)
