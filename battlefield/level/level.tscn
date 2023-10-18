@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpcyhe0ubwvsm"]
+
+[ext_resource type="Script" path="res://battlefield/level/level.gd" id="1_a7wkq"]
+[ext_resource type="PackedScene" uid="uid://b724xlmg8nkwt" path="res://battlefield/cell/cell.tscn" id="2_8q3bh"]
+
+[node name="level" type="Node2D"]
+script = ExtResource("1_a7wkq")
+cell_scene = ExtResource("2_8q3bh")

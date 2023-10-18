@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://b724xlmg8nkwt"]
+[gd_scene load_steps=5 format=3 uid="uid://b724xlmg8nkwt"]
 
 [ext_resource type="Texture2D" uid="uid://bj3f1u2n8fjry" path="res://battlefield/cell/asset/blackCell.png" id="1_g6b5n"]
+[ext_resource type="Script" path="res://battlefield/cell/cell.gd" id="1_ov76r"]
 [ext_resource type="Texture2D" uid="uid://cyt5fgebuw1du" path="res://battlefield/cell/asset/whiteCell.png" id="2_cu2lk"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qa1xx"]
@@ -22,8 +23,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Node2D" type="Node2D"]
+[node name="cell" type="Node2D"]
+script = ExtResource("1_ov76r")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_qa1xx")
-animation = &"white"
+animation = &"black"
