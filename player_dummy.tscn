@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=3 uid="uid://ckr5f1dlayii2"]
+
+[ext_resource type="Texture2D" uid="uid://byhnfcf35v2ga" path="res://Player/Sprite-0001.png" id="1_1fqkf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8wpdt"]
+atlas = ExtResource("1_1fqkf")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3emej"]
+atlas = ExtResource("1_1fqkf")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2g6wc"]
+atlas = ExtResource("1_1fqkf")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3r5cl"]
+atlas = ExtResource("1_1fqkf")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_djm28"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8wpdt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3emej")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2g6wc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3r5cl")
+}],
+"loop": true,
+"name": &"new_animation_1",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qkqjq"]
+size = Vector2(8, 16)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+z_index = 20
+scale = Vector2(2.5, 2.5)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-3.75, -20)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_djm28")
+animation = &"new_animation_1"
+autoplay = "new_animation_1"
+frame = 3
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.2, -5.2)
+scale = Vector2(2.5, 2.5)
+shape = SubResource("RectangleShape2D_qkqjq")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-0.799995, -9.19999)
+scale = Vector2(2.5, 2.5)
