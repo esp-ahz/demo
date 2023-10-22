@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b74khjkndvl4v" path="res://Shadows/MediumShadow.png" id="6_pjp36"]
 [ext_resource type="Texture2D" uid="uid://d0nipiwnu3gd8" path="res://Shadows/SmallShadow.png" id="7_ucudb"]
 [ext_resource type="Texture2D" uid="uid://co7cdy6r7gbv3" path="res://icon.svg" id="8_rijfc"]
-[ext_resource type="PackedScene" uid="uid://ckr5f1dlayii2" path="res://player_dummy.tscn" id="9_sxw15"]
+[ext_resource type="PackedScene" uid="uid://ckr5f1dlayii2" path="res://player_dummy/player_dummy.tscn" id="9_sxw15"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6ttqc"]
 texture = ExtResource("1_orohg")
@@ -274,6 +274,9 @@ layer_2/y_sort_origin = 0
 layer_2/z_index = 0
 layer_2/tile_data = PackedInt32Array()
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(780, 533)
+
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 position = Vector2(1063, 69)
 metadata/_edit_group_ = true
@@ -286,4 +289,4 @@ position = Vector2(-0.5, -0.5)
 shape = SubResource("RectangleShape2D_t5air")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("9_sxw15")]
-position = Vector2(1013, 225)
+position = Vector2(144, 144)
