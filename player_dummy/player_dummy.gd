@@ -6,7 +6,7 @@ extends CharacterBody2D
 const SCALE = 96
 const POSITION_FIX_X = 48
 const POSITION_FIX_Y = 48
-const initPos = Vector2(12,3)
+const initPos = Vector2(3,3)
 var canMove = false
 var destination = Vector2(0, 0)
 
@@ -17,7 +17,6 @@ func _ready():
 	dest[1] = initPos[1] * SCALE + POSITION_FIX_Y
 	position = dest
 	pass # Replace with function body.
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
