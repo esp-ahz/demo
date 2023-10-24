@@ -276,7 +276,8 @@ layer_2/tile_data = PackedInt32Array()
 script = ExtResource("8_ucclh")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(385, 474)
+position = Vector2(384, 480)
+zoom = Vector2(0.9, 0.9)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("9_sxw15")]
 position = Vector2(144, 144)
