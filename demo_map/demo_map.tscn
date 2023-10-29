@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://ccssf4oxm2uka"]
+[gd_scene load_steps=19 format=3 uid="uid://ccssf4oxm2uka"]
 
 [ext_resource type="Texture2D" uid="uid://byulaet3n0mjk" path="res://World/DirtTileset.png" id="1_orohg"]
 [ext_resource type="Texture2D" uid="uid://xwmm5xdaoua3" path="res://World/Grass.png" id="2_r6jkb"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://d0nipiwnu3gd8" path="res://Shadows/SmallShadow.png" id="7_ucudb"]
 [ext_resource type="Script" path="res://demo_map/TileMap.gd" id="8_ucclh"]
 [ext_resource type="PackedScene" uid="uid://ckr5f1dlayii2" path="res://player_dummy/player_dummy.tscn" id="9_sxw15"]
+[ext_resource type="Script" path="res://demo_map/Camera.gd" id="9_tnmja"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6ttqc"]
 texture = ExtResource("1_orohg")
@@ -277,7 +278,7 @@ script = ExtResource("8_ucclh")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(384, 480)
-zoom = Vector2(0.9, 0.9)
+script = ExtResource("9_tnmja")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("9_sxw15")]
 position = Vector2(144, 144)
