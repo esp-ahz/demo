@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="ea"
-run/main_scene="res://demo_map/demo_map.tscn"
+run/main_scene="res://Level/demo_level/demo_level.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
