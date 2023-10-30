@@ -3,12 +3,34 @@ extends CharacterBody2D
 @onready var playerAni = $AnimatedSprite2D		#角色动画
 @export var speed = 500
 
+# moving 移动相关
 const SCALE = 96
 const POSITION_FIX_X = 48
 const POSITION_FIX_Y = 48
 const initPos = Vector2(3,3)
 var canMove = false
 var destination = Vector2(0, 0)
+
+# charactor attributes 角色属性
+const DEF_HP = 11 	#DEF for DEFAULT
+const DEF_MOVEMENT = 3
+const DEF_MAIN_ACT = 1
+const DEF_EXTRA_ACT = 1
+var hp = DEF_HP
+var movement = DEF_MOVEMENT
+var mainAct = DEF_MAIN_ACT
+var extraAct = DEF_EXTRA_ACT
+
+# equipment 角色装备
+var weapon = [0, 0]
+var armor = 0
+var items = [0]
+var maxItemNum = 1	# 可装备道具上限，由角色属性和装备决定
+
+# magic list 角色法术
+var magic = [0, 0]
+
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -45,8 +67,6 @@ func moveTo(destination):
 	
 func normalAttack():
 	pass
-	
-func magic():
-	pass
+
 	
 	
