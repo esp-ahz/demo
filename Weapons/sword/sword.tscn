@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfbk4p5v1co8w"]
+
+[ext_resource type="Script" path="res://Weapons/sword/sword.gd" id="1_0gw4c"]
+[ext_resource type="Texture2D" uid="uid://bps8v54edrwg4" path="res://Weapons/sword/sword.png" id="2_1wxhi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_exo8y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_1wxhi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="sword" type="Node2D"]
+script = ExtResource("1_0gw4c")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.7, 0.7)
+sprite_frames = SubResource("SpriteFrames_exo8y")
+
+[node name="Skeleton2D" type="Skeleton2D" parent="."]
+
+[node name="Bone2D" type="Bone2D" parent="Skeleton2D"]
+position = Vector2(-14.33, 13.97)
+rotation = -0.785398
+scale = Vector2(2.73, 2.73)
+rest = Transform2D(1.9304, -1.9304, 1.9304, 1.9304, -14.33, 13.97)

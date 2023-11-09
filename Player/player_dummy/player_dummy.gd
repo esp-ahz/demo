@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
-@onready var playerAni = $AnimatedSprite2D		#角色动画
+@onready var animation_player = $AnimationPlayer		#角色动画
+@onready var skeleton = $Skeleton2D						#骨骼
 @export var speed = 500
 
 # moving 移动相关
@@ -9,7 +10,7 @@ const POSITION_FIX_X = 48
 const POSITION_FIX_Y = 48
 const initPos = Vector2(3,3)
 var canMove = false
-var destination = Vector2(0, 0)
+var destination = initPos
 
 # charactor attributes 角色属性
 const DEF_HP = 11 	#DEF for DEFAULT
@@ -38,6 +39,7 @@ func _ready():
 	dest[0] = initPos[0] * SCALE + POSITION_FIX_X
 	dest[1] = initPos[1] * SCALE + POSITION_FIX_Y
 	position = dest
+	animation_player.play("待机")
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -51,6 +53,13 @@ func _input(event):
 		destination[0] = floor(get_global_mouse_position()[0] / SCALE)
 		destination[1] = floor(get_global_mouse_position()[1] / SCALE)
 		canMove = true
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_RIGHT and event.is_pressed():
+		if floor(get_global_mouse_position()[0] / SCALE) < destination[0]:
+			if skeleton.scale.x > 0:
+				skeleton.scale.x = skeleton.scale.x * -1
+		elif skeleton.scale.x < 0:
+			skeleton.scale.x = skeleton.scale.x * -1
+		normalAttack()
 	pass	
 
 func moveTo(destination):
@@ -66,6 +75,7 @@ func moveTo(destination):
 	pass
 	
 func normalAttack():
+	animation_player.play("攻击")
 	pass
 
 	
