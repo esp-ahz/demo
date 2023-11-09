@@ -40,12 +40,14 @@ func _ready():
 	dest[1] = initPos[1] * SCALE + POSITION_FIX_Y
 	position = dest
 	animation_player.play("待机")
-	pass # Replace with function body.
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if canMove:
 		moveTo(destination)
+	if not animation_player.is_playing():
+		animation_player.play("待机")
 	pass
 	
 func _input(event):
@@ -77,6 +79,8 @@ func moveTo(destination):
 func normalAttack():
 	animation_player.play("攻击")
 	pass
+	
+	
 
 	
 	
