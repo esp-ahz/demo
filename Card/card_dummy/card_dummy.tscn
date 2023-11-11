@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://bxhkbi765n24f"]
+
+[ext_resource type="Script" path="res://Card/drag.gd" id="1_06e8h"]
+[ext_resource type="Texture2D" uid="uid://b07aagbicwtt6" path="res://Card/card_dummy/dummy-card.png" id="1_v0nax"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0fmxv"]
+size = Vector2(128, 156)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yyaaw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_v0nax")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="card_dummy" type="Node2D"]
+script = ExtResource("1_06e8h")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_0fmxv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
+sprite_frames = SubResource("SpriteFrames_yyaaw")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_mouse_exited"]

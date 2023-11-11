@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://ccssf4oxm2uka"]
+[gd_scene load_steps=20 format=3 uid="uid://ccssf4oxm2uka"]
 
 [ext_resource type="Texture2D" uid="uid://byulaet3n0mjk" path="res://assets/World/DirtTileset.png" id="1_ny5t6"]
 [ext_resource type="Texture2D" uid="uid://xwmm5xdaoua3" path="res://assets/World/Grass.png" id="2_r5rkj"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://Level/demo_level/TileMap.gd" id="8_fq72i"]
 [ext_resource type="Script" path="res://Level/demo_level/Camera.gd" id="9_p5yiv"]
 [ext_resource type="PackedScene" uid="uid://ckr5f1dlayii2" path="res://Player/player_dummy/player_dummy.tscn" id="10_y361g"]
+[ext_resource type="PackedScene" uid="uid://bxhkbi765n24f" path="res://Card/card_dummy/card_dummy.tscn" id="11_8ftn3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6ttqc"]
 texture = ExtResource("1_ny5t6")
@@ -282,3 +283,6 @@ script = ExtResource("9_p5yiv")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("10_y361g")]
 position = Vector2(144, 144)
+
+[node name="card_dummy" parent="." instance=ExtResource("11_8ftn3")]
+position = Vector2(231, 342)
