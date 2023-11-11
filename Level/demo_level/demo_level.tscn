@@ -283,7 +283,8 @@ position = Vector2(384, 480)
 script = ExtResource("9_p5yiv")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("10_y361g")]
-position = Vector2(798, 285)
+position = Vector2(144, 144)
+
 
 [node name="deck" parent="." instance=ExtResource("11_mbbmm")]
 position = Vector2(75, 908)
