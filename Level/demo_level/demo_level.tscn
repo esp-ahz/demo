@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://ccssf4oxm2uka"]
+[gd_scene load_steps=21 format=3 uid="uid://ccssf4oxm2uka"]
 
 [ext_resource type="Texture2D" uid="uid://byulaet3n0mjk" path="res://assets/World/DirtTileset.png" id="1_ny5t6"]
 [ext_resource type="Texture2D" uid="uid://xwmm5xdaoua3" path="res://assets/World/Grass.png" id="2_r5rkj"]
@@ -10,6 +10,8 @@
 [ext_resource type="Script" path="res://Level/demo_level/TileMap.gd" id="8_fq72i"]
 [ext_resource type="Script" path="res://Level/demo_level/Camera.gd" id="9_p5yiv"]
 [ext_resource type="PackedScene" uid="uid://ckr5f1dlayii2" path="res://Player/player_dummy/player_dummy.tscn" id="10_y361g"]
+[ext_resource type="PackedScene" uid="uid://bpgcklclaiyiv" path="res://Deck/deck.tscn" id="11_mbbmm"]
+[ext_resource type="PackedScene" uid="uid://ck6cvin8qwktw" path="res://Card/card.tscn" id="12_qfhyo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6ttqc"]
 texture = ExtResource("1_ny5t6")
@@ -282,3 +284,15 @@ script = ExtResource("9_p5yiv")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("10_y361g")]
 position = Vector2(144, 144)
+
+[node name="deck" parent="." instance=ExtResource("11_mbbmm")]
+position = Vector2(75, 908)
+
+[node name="card" parent="." instance=ExtResource("12_qfhyo")]
+position = Vector2(66, 908)
+
+[node name="card2" parent="." instance=ExtResource("12_qfhyo")]
+position = Vector2(195, 908)
+
+[node name="card3" parent="." instance=ExtResource("12_qfhyo")]
+position = Vector2(322, 909)

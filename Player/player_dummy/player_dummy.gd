@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @onready var animation_player = $AnimationPlayer		#角色动画
 @onready var skeleton = $Skeleton2D						#骨骼
+@onready var polygon = $Polygon2D						#角色图片
 @export var speed = 500
 
 # moving 移动相关
@@ -54,7 +55,8 @@ func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.is_pressed():
 		destination[0] = floor(get_global_mouse_position()[0] / SCALE)
 		destination[1] = floor(get_global_mouse_position()[1] / SCALE)
-		canMove = true
+		if destination[0] < 8 and destination[0] >= 0 and destination[1] < 8 and destination[1] >= 0:
+			canMove = true
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_RIGHT and event.is_pressed():
 		if floor(get_global_mouse_position()[0] / SCALE) < destination[0]:
 			if skeleton.scale.x > 0:
