@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnkp8k8v0y1a"]
+
+[ext_resource type="PackedScene" uid="uid://ck6cvin8qwktw" path="res://Card/card.tscn" id="1_1f8in"]
+[ext_resource type="Texture2D" uid="uid://bakgkoukqgia" path="res://Card/kick/outsider.png" id="2_ewleg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x4033"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ewleg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="kick" type="Node2D"]
+
+[node name="card" parent="." instance=ExtResource("1_1f8in")]
+position = Vector2(-3.57628e-07, 0)
+scale = Vector2(1.84, 1.84)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="card"]
+z_index = -1
+position = Vector2(-0.543478, -12.5)
+scale = Vector2(0.0982082, 0.104577)
+sprite_frames = SubResource("SpriteFrames_x4033")
