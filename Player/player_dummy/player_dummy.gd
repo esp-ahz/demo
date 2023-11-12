@@ -1,5 +1,19 @@
-extends CharacterBody2D
+extends "res://Player/PlayerBase.gd"
 
+@onready var dummy_player = $"."
+
+func _ready():
+	#绑定具体角色资源
+	animation_player = $AnimationPlayer		#角色动画
+	skeleton = $Skeleton2D					#骨骼
+	polygon = $Polygon2D					#角色图片
+	
+	#设置角色属性
+	hp = DEF_HP
+	movement = DEF_MOVEMENT
+	mainAct = DEF_MAIN_ACT
+	extraAct = DEF_EXTRA_ACT
+=======
 @onready var animation_player = $AnimationPlayer		#角色动画
 @onready var skeleton = $Skeleton2D						#骨骼
 @onready var polygon = $Polygon2D						#角色图片
@@ -82,7 +96,4 @@ func normalAttack():
 	animation_player.play("攻击")
 	pass
 	
-	
 
-	
-	
